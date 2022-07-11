@@ -1,5 +1,6 @@
 :root {
     font-family: 'Barlow', sans-serif;
+    font-size: 16px;
     --col1: rgb(154, 130, 98);
     --col2: rgb(232, 202, 147);
     --col3: rgb(240, 226, 168);
@@ -24,11 +25,54 @@
 /*HEADER*/
 
 .header {
-    background-color: var(--col2);
+    background-color: var(--col3);
     box-shadow: 0 0 5px var(--shadow);
     grid-column: 2 / 4;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.header>h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 20px;
+}
+
+.header>.top {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.top>form {
+    display: flex;
+    align-content: center;
+    gap: 10px;
+}
+
+.search {
+    border: none;
+    border-radius: 20px;
+    width: 50vw;
+    box-shadow: 0 0 5px var(--shadow)
+}
+
+.btn {
+    border-radius: 100%;
+    border: none;
+    height: 40px;
+    width: 40px;
+    flex-shrink: 0;
+    cursor: pointer;
+    background-color: var(--neutral);
+    transition: 1s;
+}
+
+.btn:hover {
+    transform: rotate(360deg) scale(1.2);
+    background-color: var(--col1);
 }
 
 /*SIDEBAR*/
@@ -41,7 +85,7 @@
 
 }
 
-.sidebar>h1 {
+.sidebar>h2 {
     display: flex;
     align-items: center;
     justify-content: left;
@@ -75,17 +119,40 @@
 /*MAIN CONTENT*/
 
 .content {
-    background-color: var(--neutral);
+    background-color: var(--col2);
     grid-row: 2 / 4;
     box-shadow: 0 0 5px #737373;
     border-radius: 10px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+    grid-template-rows: repeat(auto-fit, 300px);
+    justify-content: center;
+    padding: 20px;
+    overflow-y: scroll;
 
+}
+
+.somecontent>h3 {
+    font-size: 32px;
+    line-height: 1.1em;
+    font-weight: 700;
+}
+
+.somecontent {
+    background-color: var(--neutral);
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 5px var(--shadow);
+    padding: 20px;
+    line-height: 1.1em;
 }
 
 /*TRENDING*/
 
 .trending {
-    background-color: var(--neutral);
+    background-color: var(--col1);
     box-shadow: 0 0 5px #737373;
     border-radius: 10px;
 
@@ -94,7 +161,7 @@
 /*ANNOUNCEMENT*/
 
 .announcements {
-    background-color: var(--neutral);
+    background-color: var(--col1);
     box-shadow: 0 0 5px #737373;
     border-radius: 10px;
 
