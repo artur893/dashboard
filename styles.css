@@ -72,7 +72,7 @@
 
 .btn:hover {
     transform: rotate(360deg) scale(1.2);
-    background-color: var(--col1);
+    background-color: var(--col3);
 }
 
 /*SIDEBAR*/
@@ -133,7 +133,7 @@
 
 }
 
-.somecontent>h3 {
+h3 {
     font-size: 32px;
     line-height: 1.1em;
     font-weight: 700;
@@ -147,6 +147,13 @@
     box-shadow: 0 0 5px var(--shadow);
     padding: 20px;
     line-height: 1.1em;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.somecontent:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px black;
 }
 
 /*TRENDING*/
@@ -155,7 +162,15 @@
     background-color: var(--col1);
     box-shadow: 0 0 5px #737373;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
 
+}
+
+.trending>.somecontent {
+    border-radius: 8px;
 }
 
 /*ANNOUNCEMENT*/
@@ -164,5 +179,12 @@
     background-color: var(--col1);
     box-shadow: 0 0 5px #737373;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
 
+.announcements>.somecontent {
+    border-radius: 8px;
 }
